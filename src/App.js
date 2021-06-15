@@ -1,10 +1,10 @@
+import PostCreation from "./PostCreation"
 
-import './App.css';
-
-function App() {
-  return (
-    <div>Hello world</div>
-  );
+export default () => {
+    return (
+        <div className="container">
+            <h1>Create Posts</h1>
+            <PostCreation/>
+        </div>
+    )
 }
-
-export default App;
