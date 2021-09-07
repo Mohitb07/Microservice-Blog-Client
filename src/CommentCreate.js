@@ -3,13 +3,12 @@ import React , {useState} from 'react'
 
 function CommentCreate({postId}) {
     const [content, setContent] = useState('')
-    console.log('comment create post id ', postId)
-    const onSubmit = async (event) => {
-        event.preventDefault()
+    
+    async function onSubmit(event){
+        event.preventDefault();
         await axios.post(`http://localhost:4001/posts/${postId}/comments`, {
             content
-        })
-
+        });
         setContent('')
     }
     
@@ -20,7 +19,7 @@ function CommentCreate({postId}) {
                     <label>New Comment</label>
                     <input 
                         value={content}
-                        onChange={e=> setContent(e.target.value)}
+                        onChange={e => setContent(e.target.value)}
                         className="form-control"/>
                 </div>
                 <button className="btn btn-primary">Submit</button>
