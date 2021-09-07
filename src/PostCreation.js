@@ -1,7 +1,7 @@
 import React, {useState} from "react"
 import axios from 'axios'
 
-export default () => {
+export default function PostCreation(){
 
     const [title, setTitle] = useState('')
     
