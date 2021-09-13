@@ -8,7 +8,7 @@ export default function PostCreation(){
     const submitHandler = async(event) => {
         event.preventDefault();
 
-        await axios.post('http://posts.com/posts', {
+        await axios.post('http://posts.com/posts/create', {
             title
         });
 
